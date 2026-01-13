@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Sender - pywhatkit</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 50px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 8px;
+        }
+        button {
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .status {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Send WhatsApp Message</h2>
+
+    <form method="POST">
+        <input type="text" name="phone" placeholder="+919876543210" required>
+        <textarea name="message" placeholder="Enter your message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if status %}
+        <div class="status">{{ status }}</div>
+    {% endif %}
+</div>
+
+</body>
+</html>
